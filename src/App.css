@@ -5,7 +5,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+@layer utilities {
+  .animate-fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
 #content {
   height: 100vh;
 
@@ -103,10 +108,10 @@ li {
   transform: rotate(40deg);
   background-color: rgb(255, 255, 255);
   position: absolute;
+  width: 25vh;
   left: -10vw;
   top: -25vh;
-  width: 44vh;
-  height: 80vh;
+  height: 100%;
   z-index: 4;
 }
 
@@ -119,11 +124,164 @@ li {
 
 }
 
-.fw h4{
+.bt4new h4,
+.fw h4 {
   font-size: 1.4rem;
   font-weight: 700;
 }
-.fw h4 span{
+
+.bt4new h4 span,
+.fw h4 span {
   font-size: 2rem;
   color: #18a2d0;
 }
+
+.bt4new button,
+.fw button {
+  margin-top: 1rem;
+  overflow: hidden;
+  background-color: #15b7fc28;
+  border: solid 1px #c6c6c6d8;
+  /* border: solid 1px #15b7fcd8; */
+  position: relative;
+}
+
+.bt4new button div,
+.fw button div {
+  /* padding-top: .2rem; */
+  border: solid 1px #c6c6c6d8;
+  transform: rotate(-25deg);
+  position: relative;
+  z-index: 1;
+}
+
+.bt4new button p,
+.fw button p {
+  z-index: 1;
+  position: relative;
+}
+
+.bt4new button:hover,
+.fw button:hover {
+  border: solid 1px #15b7fcd8;
+  box-shadow: 0 0 1rem 2px #15B8FC;
+}
+
+.bt4new button:hover p,
+.fw button:hover p {
+  color: #15B8FC;
+
+}
+
+.bt4new button:hover div,
+.fw button:hover div {
+  border: solid 1px #15b7fcd8;
+  color: #15B8FC;
+  transform: rotate(0);
+  animation: art .5s ease-in-out 0s 1;
+}
+
+.bt4new button:hover div i,
+.fw button:hover div i {
+  animation: art2 .5s ease-in-out .5s infinite;
+
+}
+
+@keyframes art2 {
+  0% {
+    opacity: 20%;
+  }
+}
+
+@keyframes art {
+  0% {
+    transform: translateX(-.7rem) translateY(2rem);
+  }
+
+  80% {
+    transform: translateX(.5rem) rotate(0);
+  }
+}
+
+.pmmm {
+  position: relative;
+  height: fit-content;
+}
+
+.pmmm::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: .3rem;
+  top: 0;
+  left: -1rem;
+  border-radius: 1rem;
+  background-color: #15B8FC;
+}
+
+.bt4new {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 90%;
+  display: none;
+}
+
+@media screen and (max-width:580px) {
+
+  .wth {
+    background-color: #132127d1;
+    z-index: 2;
+  }
+
+  .fw {
+    display: none;
+  }
+
+  .lgu {
+    left: 15%;
+  }
+
+  .bt4 {
+    background: none;
+  }
+
+  /* .fp {
+    overflow: visible;
+  } */
+
+  .pmmm {
+    text-align: start;
+    max-width: 18rem;
+  }
+
+  .lkd {
+    display: none;
+  }
+
+  /* .backtr {
+    width: 60vh;
+  } */
+
+  .bt4new {
+    display: block;
+  }
+}
+@media screen and (min-width:580px) {
+  .fw{
+    padding-left: 6rem;
+  }
+}
+/* .fw button::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-color: #0280b7;
+  transform: rotate(-25deg);
+} */
+ .sp{
+  background-color: #132127;
+ }
