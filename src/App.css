@@ -1,42 +1,129 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "tailwindcss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#content {
+  height: 100vh;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: sans-serif;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.card {
-  padding: 2em;
+.lgu {
+  z-index: 5;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  justify-content: start;
+  width: fit-content;
+  padding: .4rem 1.5rem;
+  border-radius: .8rem;
+  outline: solid 1px rgba(255, 255, 255, 0.502);
+  color: white;
+  position: absolute;
+  background-color: #132127;
+  align-items: center;
+  gap: .5rem;
 }
 
-.read-the-docs {
-  color: #888;
+.lgu li:nth-child(1) {
+  font-size: .9rem;
+}
+
+.lgu li:nth-child(2) {
+  font-size: .85rem;
+
+}
+
+.lgu .logoG img {
+  height: 3rem;
+  transform: translateY(-4px);
+}
+
+.lgu .ls {
+  color: #15B8FC;
+}
+
+.bgsc {
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scrollbar-gutter: stable both-edges;
+
+}
+
+.fp {
+  overflow: hidden;
+  position: relative;
+}
+
+.sp,
+.fp {
+  height: 100vh;
+}
+
+.backtrRight,
+.backtr {
+  background-color: #132127;
+}
+
+.backtr {
+  z-index: 2;
+  height: 150%;
+  width: 50vh;
+  position: absolute;
+  top: -20vh;
+  left: 2rem;
+  transform: rotate(40deg);
+}
+
+.bt4 {
+  position: absolute;
+  width: 60vw;
+  border-bottom-left-radius: 5rem;
+  height: 80vh;
+  background-color: #132127;
+  right: 0;
+  z-index: 3;
+}
+
+.wth {
+  transform: rotate(40deg);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: -10vw;
+  top: -25vh;
+  width: 44vh;
+  height: 80vh;
+  z-index: 4;
+}
+
+.lkd {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  transform: translate(-50%, -50%) rotate(-40deg);
+  width: 10rem;
+
+}
+
+.fw h4{
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.fw h4 span{
+  font-size: 2rem;
+  color: #18a2d0;
 }
