@@ -152,35 +152,51 @@ function App() {
                         </div> :
                         data.map((card, ind) => (
                           <>
-                            <ul key={card.id}>
+                            <ul key={card.id} className='relative'>
+                              <div className="absolute left-[.5rem] top-[.5rem]">
+                                <img src={logo} className='h-[2.5rem]' alt="" />
+                              </div>
                               <li className='flex justify-end items-end flex-col'>
                                 <p className='!text-[.9rem]'>
                                   {card.created_at ? new Date(card.created_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '------'}
                                 </p>
                                 <p className='!text-[.9rem]'>Posted</p>
                               </li>
-                              <li className='!mt-[.7rem]'><p>{card.what}</p><p>What</p></li>
-                              <li className='!mt-[.7rem]'><p>
-                                {
-                                  (new Date(card.when).toLocaleString('en-US', {
-                                    month: 'long',
-                                    day: 'numeric',
-                                    year: 'numeric',
-                                    hour: 'numeric',
-                                    minute: '2-digit',
-                                    hour12: true
-                                  }).replace(',', ''))
-                                }
-                              </p><p>When</p></li>
-                              <li><p>{card.where}</p><p>Where</p></li>
+                              <li className='!mt-[.7rem]'>
+                                <p>What</p>
+                                <p>{card.what}</p>
+                              </li>
+                              <li className='!mt-[.7rem]'>
+                                <p>When</p>
+                                <p>
+                                  {
+                                    (new Date(card.when).toLocaleString('en-US', {
+                                      month: 'long',
+                                      day: 'numeric',
+                                      year: 'numeric',
+                                      hour: 'numeric',
+                                      minute: '2-digit',
+                                      hour12: true
+                                    }).replace(',', ''))
+                                  }
+                                </p>
+                              </li>
+                              <li className='!mt-[.7rem]'>
+                                <p>Where</p>
+                                <p>{card.where}</p>
+                              </li>
                               <br />
-                              <p className='text-[#c7c7c795]'>Who</p>
                               <hr />
-                              <p>{card.who}</p>
-                              <br />
-                              <p className='text-[#c7c7c795]'>Description</p>
+                              <li className='!py-[.5rem]'>
+                                <p>Who</p>
+                                <p>{card.who}</p>
+                              </li>
                               <hr />
-                              <p>{card.description}</p>
+                              <li className='!py-[.5rem]'>
+                                <p>Description</p>
+                                <p>{card.description}</p>
+                              </li>
+                              <hr />
 
                             </ul>
                             {ind === data.length - 1 &&
