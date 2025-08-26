@@ -231,7 +231,7 @@ li {
 }
 
 .annn {
-  width: 20rem;
+  width: 17rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
