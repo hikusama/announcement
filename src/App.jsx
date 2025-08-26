@@ -64,7 +64,7 @@ function App() {
       const { data: fetchedData, error } = await supabase
         .from("announcement")
         .select("*")
-        .order("created_at", { ascending: false })
+        .order("created_at", { ascending: true })
         .range(from, to);
 
       if (error) throw error;
